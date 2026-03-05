@@ -18,7 +18,7 @@ public class LargestDigit {
 			}
 			Num=Num/10;
 		}
-		System.out.print(max + " " + "Largest digit in the number.");
+		System.out.print(max + " is Largest digit in the number.");
 		sc.close();
 	}
 
