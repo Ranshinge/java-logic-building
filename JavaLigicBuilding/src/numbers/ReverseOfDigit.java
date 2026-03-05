@@ -15,7 +15,7 @@ public class ReverseOfDigit {
 		while(Number>0)
 		{
 			digit=Number%10;
-			rev=rev*10+digit;
+			rev=rev*10+digi;
 			Number=Number/10;
 		}
 		
@@ -24,3 +24,4 @@ public class ReverseOfDigit {
 	}
 
 }
+
