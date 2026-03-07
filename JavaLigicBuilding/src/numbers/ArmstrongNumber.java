@@ -5,23 +5,28 @@ public class ArmstrongNumber {
 	public static void main(String[] args) {
 		Scanner sc =new Scanner(System.in);
 		System.out.print("Enter a number: ");
-		int num=sc.nextInt();
-		int digit=0,arnum=0,count=0,orgnum=num;
+		int num = sc.nextInt();
+		int count=0, tempnum=num, orgnum=num, digitsum=0, digit=0;
+		
 		while(num>0)
 		{
-			digit=num%10;
-			//arnum=arnum+(digit*digit*digit);
 			count++;
 			num=num/10;
 		}
-		arnum=arnum+(digit*digit*digit);
-		if(orgnum==arnum)
+		while(tempnum>0)
 		{
-			System.out.print(orgnum + " is ArmstrongNumber");
+			digit=tempnum%10;
+			digitsum+=(int)Math.pow(digit, count);
+			tempnum=tempnum/10;
+			
+		}
+		if(digitsum==orgnum)
+		{
+			System.out.print(orgnum + " is Armstrong number.");
 		}
 		else
 		{
-			System.out.print(num + " is not ArmstrongNumber");
+			System.out.print(orgnum + " is not Armstrong number.");
 		}
 		sc.close();
 	}
